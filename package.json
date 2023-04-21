@@ -1,0 +1,28 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "Fuhgeddaboudit is a chrome extension to clear your head from AI related jargon",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/desaianand1/Fuhgeddaboudit-site.git"
+  },
+  "author": "Andymus Dev",
+  "license": "UNLICENCED",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/desaianand1/Fuhgeddaboudit-site/issues"
+  },
+  "homepage": "https://github.com/desaianand1/Fuhgeddaboudit-site#readme",
+  "devDependencies": {
+    "@types/node": "^18.15.12",
+    "parcel": "^2.8.3",
+    "tailwindcss": "^3.3.1",
+    "typescript": "^5.0.4"
+  }
+}
