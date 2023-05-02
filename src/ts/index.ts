@@ -1,5 +1,6 @@
+import { setHeadline } from "./headline";
+
 function onDOMLoaded(): void {
-  console.log("js ran");
   const toggleSwitch = <HTMLInputElement>(
     document.getElementById("toggle-switch")
   );
@@ -8,10 +9,6 @@ function onDOMLoaded(): void {
 
 function onToggled(event: Event) {
   const toggleSwitch = <HTMLInputElement>event.target;
-  if (toggleSwitch.checked) {
-    console.log("checked");
-  } else {
-    console.log("not checked");
-  }
+  setHeadline(toggleSwitch.checked);
 }
 document.addEventListener("DOMContentLoaded", onDOMLoaded);

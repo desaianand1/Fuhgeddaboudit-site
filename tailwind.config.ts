@@ -23,6 +23,7 @@ module.exports = {
         "primary-dark-tint-30": "#8FADFF",
         "on-primary-dark-tint-30": "#00185C",
         "deemphasized-dark": "#444b6a",
+        "hero-img": "#25293B",
       },
       fontFamily: {
         sans: [
