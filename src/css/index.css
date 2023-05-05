@@ -5,7 +5,12 @@
 :root {
   --switch-width: 10em;
   --switch-height: 5em;
-  --switch-margin: 0.4em;
+  --switch-margin: 0.6em;
+}
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
 }
 @layer components {
   .cta-btn {
@@ -13,11 +18,11 @@
   }
 
   .nav-link {
-    @apply text-on-primary-tint-10 dark:text-on-primary-dark-shade-90 hover:bg-primary-tint-30 dark:hover:bg-primary-dark-shade-70 hover:text-on-primary-tint-30 dark:hover:text-on-primary-dark-shade-70 rounded-md px-3 py-2 text-lg font-medium;
+    @apply text-on-primary-tint-10 dark:text-on-primary-dark-shade-90 hover:bg-primary-tint-30 dark:hover:bg-primary-dark-shade-70 hover:text-on-primary-tint-30 dark:hover:text-on-primary-dark-shade-70 rounded-md px-3 py-2 text-lg md:text-xl font-semibold;
   }
 
   .icon {
-    @apply fill-on-primary dark:fill-on-primary-dark;
+    @apply fill-on-primary dark:fill-on-primary-dark stroke-2;
   }
 
   .cta-btn.animate-on-hover:hover .icon {

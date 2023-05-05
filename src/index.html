@@ -23,28 +23,26 @@
 </head>
 
 <body>
-    <div class="h-screen bg-primary">
-        <header class=" inset-x-0 top-0 z-50">
+    <div class="h-full bg-primary">
+        <header class="inset-x-0 top-0 z-50">
             <nav class="bg-transparent">
                 <div class="mx-auto max-w-full px-2 sm:px-6 lg:px-12 py-2 lg:py-4">
-                    <div class="relative flex h-16 items-center justify-center sm:justify-between">
-                        <div class="items-center justify-center">
+                    <div class="relative flex h-8 md:h-16 items-center justify-center md:justify-between">
                             <a href="#" class="flex items-center justify-center">
                                 <img class="h-9 md:h-11 w-auto" src="./assets/logo_128.png" alt="Fuhgeddaboudit logo">
                                 <span
-                                    class="ms-3 text-3xl  md:text-4xl text-primary dark:text-primary-dark font-black italic">Fuhgeddaboudit</span>
+                                    class="ms-3 text-2xl sm:text-3xl md:text-4xl text-primary dark:text-primary-dark font-black italic">Fuhgeddaboudit</span>
                             </a>
-                        </div>
                         <div
-                            class="fixed flex bg-primary-tint-30 dark:bg-primary-shade-70 justify-evenly items-center inset-x-0 bottom-0 z-50 p-4  sm:bg-transparent sm:space-x-4 sm:relative">
-                            <a href="#what" class="nav-link">What?</a>
+                            class="fixed flex bg-primary-tint-30 dark:bg-primary-shade-70 justify-evenly items-center inset-x-0 bottom-0 z-50 p-4  md:bg-transparent md:space-x-4 md:relative">
+                            <a href="#why" class="nav-link">Why?</a>
                             <button type="button" class="cta-btn animate-on-hover">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 icon" viewBox="0 0 24 24">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 md:h-8 md:w-8 icon" viewBox="0 0 24 24">
                                     <path
                                         d="m12 20 3.46-6h-.01c.34-.6.55-1.27.55-2 0-1.2-.54-2.27-1.38-3h4.79c.38.93.59 1.94.59 3a8 8 0 0 1-8 8m-8-8c0-1.46.39-2.82 1.07-4l3.47 6h.01c.69 1.19 1.95 2 3.45 2 .45 0 .88-.09 1.29-.23l-2.4 4.14C7 19.37 4 16.04 4 12m11 0a3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3m-3-8a7.98 7.98 0 0 1 6.92 4H12c-1.94 0-3.55 1.38-3.92 3.21L5.7 7.08A7.981 7.981 0 0 1 12 4m0-2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z" />
                                 </svg>
 
-                                <span class="px-2 text-lg font-bold">Add to Chrome</span>
+                                <span class="px-2 text-lg md:text-xl font-bold">Add to Chrome</span>
                             </button>
                         </div>
                     </div>
@@ -54,24 +52,25 @@
         <!-- Hero -->
         <section>
             <div
-                class="mx-auto w-11/12 grid grid-rows-2 lg:grid-cols-2 gap-6 lg:gap-4 px-0 sm:px-10 lg:px-16 py-24 md:py-32  bg-red-400">
-                <div class="flex-row text-center md:text-left leading-10 bg-slate-400">
-                    <div class="flex-col bg-blue-400">
-                        <h1 class="text-4xl md:text-6xl lg:text-7xl font-black pb-4">Tired of AI buzzwords?</h1>
-                        <p class="text-md sm:text-lg md:text-3xl pb-4">Don't want to read about it everywhere you look?
+                class="mx-auto w-10/12 md:w-11/12 grid grid-rows-2 lg:grid-cols-2 gap-6 lg:gap-4 px-0 sm:px-10 lg:px-16 py-24 md:py-32  bg-red-400">
+                <div class="flex-row text-center  md:text-left bg-slate-400">
+                    <div class="flex-col leading-10 bg-blue-400">
+                        <h1 class="text-4xl leading-10 md:text-6xl lg:text-7xl font-black pb-4">Tired of AI buzzwords?</h1>
+                        <p class="text-md leading-10 sm:text-lg md:text-3xl pb-4">Don't want to read about it everywhere you look?
                         </p>
-                        <p class="text-lg sm:text-xl md:text-4xl pb-4">Well,&nbsp;<span
-                                class="italic font-black text-3xl md:text-5xl lg:text-6xl ">Fuhgeddaboudit</span></p>
+                        <p class="text-lg leading-10 sm:text-xl md:text-4xl pb-4">Well,&nbsp;</p>
+                        <span
+                                class="italic font-black text-3xl md:text-5xl lg:text-6xl ">Fuhgeddaboudit</span>
                     </div>
 
                     <div
                         class="flex-row text-center items-center justify-center md:text-left md:items-start bg-green-400 mt-4">
                         <button type="button" class="cta-btn animate-on-hover">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 icon" viewBox="0 0 24 24">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 md:h-10 md:w-10 icon" viewBox="0 0 24 24">
                                 <path
                                     d="m12 20 3.46-6h-.01c.34-.6.55-1.27.55-2 0-1.2-.54-2.27-1.38-3h4.79c.38.93.59 1.94.59 3a8 8 0 0 1-8 8m-8-8c0-1.46.39-2.82 1.07-4l3.47 6h.01c.69 1.19 1.95 2 3.45 2 .45 0 .88-.09 1.29-.23l-2.4 4.14C7 19.37 4 16.04 4 12m11 0a3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3m-3-8a7.98 7.98 0 0 1 6.92 4H12c-1.94 0-3.55 1.38-3.92 3.21L5.7 7.08A7.981 7.981 0 0 1 12 4m0-2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z" />
                             </svg>
-                            <span class="px-2 text-4xl font-semibold">Add to Chrome</span>
+                            <span class="px-2 text-lg md:text-2xl font-bold">Add to Chrome</span>
                         </button>
                     </div>
 
@@ -94,6 +93,13 @@
                     <div class="p-2 items-center"><img src="./assets/hero/example-before.png" /></div>
                 </div>
             </div>
+        </section>
+          <!--Why-->
+        <section id="why">
+          <div class="mx-auto w-11/12 grid grid-rows-2 lg:grid-cols-2 gap-6 lg:gap-4 px-0 sm:px-10 lg:px-16 py-24 md:py-32  bg-yellow-400">
+            <p>Why?</p>
+            <p>dsdsnbdfuikbsdfuijbshndikujfbsdik</p>
+          </div>
         </section>
     </div>
     <footer> <small>Copyright © 2023 Trypticon Solutions. All Rights Reserved.</small><a
