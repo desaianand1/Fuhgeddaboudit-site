@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run clean && parcel",
     "build": "npm run clean && parcel build",
-    "deploy": "npm run build && gh-pages -d dist -b main",
+    "deploy": "npm run build && gh-pages -d dist -b gh-pages",
     "clean": "rimraf dist"
   },
   "targets": {

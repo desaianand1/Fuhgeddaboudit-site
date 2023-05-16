@@ -68,13 +68,12 @@
     background-image: url("../assets/hero/anim_bg.svg");
     background-size: cover;
   }
-  
+
   .hero-dark {
     background-image: url("../assets/hero/anim_bg_dark.svg");
     background-size: cover;
   }
 }
-
 
 input#toggle-switch[type="checkbox"] {
   height: 0;
