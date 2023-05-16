@@ -63,11 +63,18 @@
   .animate-on-hover {
     @apply transition-all ease-in-out duration-300 hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none;
   }
+
+  .hero {
+    background-image: url("../assets/hero/anim_bg.svg");
+    background-size: cover;
+  }
+  
+  .hero-dark {
+    background-image: url("../assets/hero/anim_bg_dark.svg");
+    background-size: cover;
+  }
 }
-.hero {
-  background-image: url("../assets/hero/anim_bg.svg");
-  background-size: cover;
-}
+
 
 input#toggle-switch[type="checkbox"] {
   height: 0;
