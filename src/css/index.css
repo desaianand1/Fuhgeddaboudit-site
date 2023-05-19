@@ -21,6 +21,10 @@
     @apply text-on-primary-tint-10 dark:text-on-primary-dark-shade-90 hover:bg-primary-tint-30 dark:hover:bg-primary-dark-shade-70 hover:text-on-primary-tint-30 dark:hover:text-on-primary-dark-shade-70 rounded-md px-3 py-2 text-lg md:text-xl font-semibold;
   }
 
+  .nav-title {
+    @apply text-2xl sm:text-3xl md:text-4xl text-primary dark:text-primary-dark hover:text-primary-shade-70 dark:hover:text-primary-dark-tint-30 font-black italic;
+  }
+
   .icon {
     @apply fill-on-primary dark:fill-on-primary-dark stroke-2;
   }
@@ -54,9 +58,19 @@
       transform: rotate(360deg);
     }
   }
+
+  .hero {
+    background-image: url("../assets/hero/test-bubbles.svg");
+    background-size: cover;
+  }
+
+  .hero-dark {
+    background-image: url("../assets/hero/test-bubbles.svg");
+    background-size: cover;
+  }
 }
 @layer utilities {
-  .bg-primary {
+  .bg-primary-surface {
     @apply bg-primary-tint-10 dark:bg-primary-dark-shade-90;
   }
 
@@ -64,14 +78,8 @@
     @apply transition-all ease-in-out duration-300 hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none;
   }
 
-  .hero {
-    background-image: url("../assets/hero/anim_bg.svg");
-    background-size: cover;
-  }
-
-  .hero-dark {
-    background-image: url("../assets/hero/anim_bg_dark.svg");
-    background-size: cover;
+  .animate-color-on-hover {
+    @apply transition-colors ease-in-out duration-300 motion-reduce:transition-none;
   }
 }
 
