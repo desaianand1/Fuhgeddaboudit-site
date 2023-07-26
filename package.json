@@ -1,5 +1,5 @@
 {
-  "name": "y",
+  "name": "fuhgeddaboudit-site",
   "version": "1.0.0",
   "description": "Fuhgeddaboudit is a chrome extension to clear your head from AI related jargon",
   "source": "src/index.html",
@@ -7,7 +7,8 @@
     "start": "npm run clean && parcel",
     "build": "npm run clean && parcel build",
     "deploy": "npm run build && gh-pages -d dist -b gh-pages",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "prepare": "husky install"
   },
   "targets": {
     "default": {
@@ -31,9 +32,16 @@
     "@parcel/transformer-webmanifest": "^2.8.3",
     "@types/node": "^18.15.12",
     "gh-pages": "^5.0.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.3",
     "parcel": "^2.8.3",
+    "prettier": "^3.0.0",
+    "prettier-plugin-tailwindcss": "^0.4.1",
     "rimraf": "^5.0.0",
     "tailwindcss": "^3.3.1",
     "typescript": "^5.0.4"
+  },
+  "lint-staged": {
+    "*.{ts,js,css,md,html}": "prettier --write"
   }
 }
