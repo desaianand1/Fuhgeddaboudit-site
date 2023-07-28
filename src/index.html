@@ -1,122 +1,276 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Fuhgeddaboudit is a chrome extension to clear your head from AI related jargon"
+        />
+        <meta name="robots" content="index,follow" />
+        <meta name="googlebot" content="index,follow" />
+        <meta name="referrer" content="no-referrer" />
+        <meta name="color-scheme" content="dark light" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./favicon-16x16.png"
+        />
+        <link rel="manifest" href="./site.webmanifest" />
+        <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#7096ff" />
+        <meta name="msapplication-TileColor" content="#2d89ef" />
+        <link rel="stylesheet" type="text/css" href="./css/index.css" />
+        <script defer src="./ts/index.ts" type="module"></script>
+        <title>Fuhgeddaboudit</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'"> -->
-    <meta name="description" content="Fuhgeddaboudit is a chrome extension to clear your head from AI related jargon">
-    <meta name="robots" content="index,follow">
-    <meta name="googlebot" content="index,follow">
-    <meta name="referrer" content="no-referrer">
-    <meta name="color-scheme" content="dark light">
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-    <link rel="manifest" href="./site.webmanifest">
-    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#7096ff">
-    <meta name="msapplication-TileColor" content="#2d89ef">
-    <link rel="stylesheet" type="text/css" href="./css/index.css" />
-    <script defer src="./ts/index.ts" type="module"></script>
-    <title>Fuhgeddaboudit</title>
-</head>
-
-<body>
-    <div class="bg-primary">
-        <header class="inset-x-0 top-0 z-50">
-            <nav class="bg-transparent">
-                <div class="mx-auto max-w-full px-2 sm:px-6 lg:px-12 py-2 lg:py-4">
-                    <div class="relative flex h-8 md:h-16 items-center justify-center md:justify-between">
-                        <a href="#" class="flex items-center justify-center">
-                            <img class="h-9 md:h-11 w-auto" src="./assets/logo_128.png" alt="Fuhgeddaboudit logo">
-                            <span
-                                class="ms-3 text-2xl sm:text-3xl md:text-4xl text-primary dark:text-primary-dark font-black italic">Fuhgeddaboudit</span>
-                        </a>
+    <body>
+        <div class="bg-surface-000 dark:bg-surface-900">
+            <div class="xl:hero xl:dark:hero-dark">
+                <header class="inset-x-0 top-0 z-50">
+                    <nav class="bg-transparent">
                         <div
-                            class="fixed flex bg-primary-tint-30 dark:bg-primary-shade-70 justify-evenly items-center inset-x-0 bottom-0 z-50 p-4  md:bg-transparent md:space-x-4 md:relative">
-                            <a href="#why" class="nav-link">Why?</a>
-                            <button type="button" class="cta-btn animate-on-hover">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 md:h-8 md:w-8 icon"
-                                    viewBox="0 0 24 24">
-                                    <path
-                                        d="m12 20 3.46-6h-.01c.34-.6.55-1.27.55-2 0-1.2-.54-2.27-1.38-3h4.79c.38.93.59 1.94.59 3a8 8 0 0 1-8 8m-8-8c0-1.46.39-2.82 1.07-4l3.47 6h.01c.69 1.19 1.95 2 3.45 2 .45 0 .88-.09 1.29-.23l-2.4 4.14C7 19.37 4 16.04 4 12m11 0a3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3m-3-8a7.98 7.98 0 0 1 6.92 4H12c-1.94 0-3.55 1.38-3.92 3.21L5.7 7.08A7.981 7.981 0 0 1 12 4m0-2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z" />
-                                </svg>
+                            class="mx-auto max-w-full px-2 py-2 sm:px-6 lg:px-12 lg:py-4"
+                        >
+                            <div
+                                class="relative flex h-8 items-center justify-center md:h-16 md:justify-between"
+                            >
+                                <a
+                                    href="#"
+                                    class="flex items-center justify-center"
+                                >
+                                    <img
+                                        class="h-9 w-auto md:h-11"
+                                        src="./assets/logo_128.png"
+                                        alt="Fuhgeddaboudit logo"
+                                    />
+                                    <span
+                                        class="hover:text-600 animate-color-on-hover ms-3 text-2xl font-black italic text-primary-500 dark:text-primary-300 dark:hover:text-primary-200 sm:text-3xl md:text-4xl"
+                                        >Fuhgeddaboudit</span
+                                    >
+                                </a>
+                                <div
+                                    class="fixed inset-x-0 bottom-0 z-50 flex items-center justify-evenly bg-surface-200 p-4 dark:bg-surface-800 md:relative md:space-x-4 md:bg-transparent"
+                                >
+                                    <a
+                                        href="#why"
+                                        class="animate-color-on-hover rounded-md px-3 py-2 text-lg font-semibold text-primary-800 hover:bg-surface-100 dark:text-primary-100 dark:hover:bg-surface-800 md:text-xl"
+                                        >Why?</a
+                                    >
+                                    <button
+                                        type="button"
+                                        class="cta-btn animate-on-hover"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="icon h-7 w-7 md:h-8 md:w-8"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                d="m12 20 3.46-6h-.01c.34-.6.55-1.27.55-2 0-1.2-.54-2.27-1.38-3h4.79c.38.93.59 1.94.59 3a8 8 0 0 1-8 8m-8-8c0-1.46.39-2.82 1.07-4l3.47 6h.01c.69 1.19 1.95 2 3.45 2 .45 0 .88-.09 1.29-.23l-2.4 4.14C7 19.37 4 16.04 4 12m11 0a3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3m-3-8a7.98 7.98 0 0 1 6.92 4H12c-1.94 0-3.55 1.38-3.92 3.21L5.7 7.08A7.981 7.981 0 0 1 12 4m0-2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"
+                                            />
+                                        </svg>
 
-                                <span class="px-2 text-lg md:text-xl font-bold">Add to Chrome</span>
-                            </button>
+                                        <span
+                                            class="px-2 text-lg font-bold md:text-xl"
+                                            >Add to Chrome</span
+                                        >
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+                <!-- Hero -->
+                <section>
+                    <div
+                        class="mx-auto grid w-full gap-6 px-4 pb-10 pt-20 sm:px-10 md:pb-20 md:pt-32 lg:w-11/12 lg:grid-cols-2 lg:gap-10 lg:px-16"
+                    >
+                        <div class="flex-col text-center lg:text-start">
+                            <span class="flex items-center md:items-stretch">
+                                <picture class="me-3">
+                                    <source
+                                        srcset="
+                                            https://fonts.gstatic.com/s/e/notoemoji/latest/1f62e_200d_1f4a8/512.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f62e_200d_1f4a8/512.gif"
+                                        alt="😮‍💨"
+                                        class="h-8 w-8 md:h-14 md:w-14"
+                                    />
+                                </picture>
+                                <h1
+                                    class="pb-2 text-4xl font-black leading-10 text-primary-700 dark:text-primary-100 md:text-5xl lg:pb-4 xl:text-6xl"
+                                >
+                                    Tired of AI buzzwords?
+                                </h1>
+                            </span>
+
+                            <p
+                                class="pb-2 text-lg font-semibold leading-10 text-primary-700 dark:text-primary-100 md:text-2xl lg:pb-4 xl:text-4xl"
+                            >
+                                Don't want to read about it everywhere you look?
+                            </p>
+                            <p
+                                class="pb-1 text-lg font-semibold leading-10 text-primary-700 dark:text-primary-100 md:text-2xl lg:pb-3 xl:text-4xl"
+                            >
+                                Well,&nbsp;
+                            </p>
+                            <span
+                                class="text-4xl font-black italic leading-10 text-primary-500 dark:text-primary-300 md:text-5xl xl:text-7xl"
+                                >Fuhgeddaboudit</span
+                            >
+
+                            <div
+                                class="mt-4 flex-row justify-center text-center sm:mt-8 lg:text-start"
+                            >
+                                <button
+                                    type="button"
+                                    class="cta-btn animate-on-hover w-full sm:w-auto"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="icon h-7 w-7 md:h-14 md:w-14"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            d="m12 20 3.46-6h-.01c.34-.6.55-1.27.55-2 0-1.2-.54-2.27-1.38-3h4.79c.38.93.59 1.94.59 3a8 8 0 0 1-8 8m-8-8c0-1.46.39-2.82 1.07-4l3.47 6h.01c.69 1.19 1.95 2 3.45 2 .45 0 .88-.09 1.29-.23l-2.4 4.14C7 19.37 4 16.04 4 12m11 0a3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3m-3-8a7.98 7.98 0 0 1 6.92 4H12c-1.94 0-3.55 1.38-3.92 3.21L5.7 7.08A7.981 7.981 0 0 1 12 4m0-2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"
+                                        />
+                                    </svg>
+                                    <span
+                                        class="px-2 text-2xl font-bold md:text-4xl"
+                                        >Add to Chrome</span
+                                    >
+                                </button>
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex-col items-center justify-center overflow-hidden rounded-2xl bg-hero-example-img shadow-2xl shadow-slate-900/50 dark:shadow-slate-800/50"
+                        >
+                            <div
+                                id="headline-container"
+                                class="m:py-4 flex flex-row items-center justify-center py-2"
+                            >
+                                <template id="headline">
+                                    <picture class="emoji me-3">
+                                        <source
+                                            srcset="
+                                                https://fonts.gstatic.com/s/e/notoemoji/latest/1f635_200d_1f4ab/512.webp
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f635_200d_1f4ab/512.gif"
+                                            alt="😵"
+                                            class="h-7 w-7 md:h-14 md:w-14"
+                                        />
+                                    </picture>
+                                    <span
+                                        id="headline-text"
+                                        class="deemphasized-text text-lg font-bold md:text-2xl xl:text-4xl"
+                                        >AI buzzwords everywhere.</span
+                                    >
+                                </template>
+                            </div>
+                            <div
+                                class="my-3 flex items-center justify-center text-center"
+                            >
+                                <input type="checkbox" id="toggle-switch" />
+                                <label id="switch-label" for="toggle-switch"
+                                    >Toggle Switch</label
+                                >
+                            </div>
+                            <div class="h-full w-full items-center">
+                                <img
+                                    id="example-img"
+                                    class="h-auto w-full"
+                                    src="./assets/hero/example-before.png"
+                                    loading="lazy"
+                                    alt="before and after Fuhgeddaboudit"
+                                />
+                            </div>
                         </div>
                     </div>
-                </div>
-            </nav>
-        </header>
-        <!-- Hero -->
-        <section>
-            <div
-                class="mx-auto w-full lg:w-11/12 grid lg:grid-cols-2 gap-6 lg:gap-10 px-4 sm:px-10 lg:px-16 pt-20 pb-10 md:pt-32 md:pb-20 hero dark:hero-dark">
-                <div class="flex-col text-center md:text-left leading-10">
-
+                </section>
+            </div>
+            <!--Why-->
+            <section id="why">
+                <div class="mx-auto w-full px-4 sm:px-10 lg:w-11/12 lg:px-16">
                     <h1
-                        class="text-4xl md:text-6xl lg:text-7xl font-black leading-9 md:leading-10 pb-2 lg:pb-4 text-primary dark:text-primary-dark">
-                        Tired of AI buzzwords?</h1>
+                        class="pb-4 text-lg font-semibold text-primary-500 dark:text-primary-300 md:text-2xl xl:text-4xl"
+                    >
+                        Why?
+                    </h1>
                     <p
-                        class="text-lg md:text-2xl lg:text-4xl leading-9 md:leading-10 pb-2 lg:pb-4 font-semibold text-on-primary-tint-10 dark:text-on-primary-dark-shade-90">
-                        Don't want to read about it everywhere you look?
+                        class="text-md pb-4 text-primary-800 dark:text-primary-100 md:text-lg xl:text-2xl"
+                    >
+                        When ChatGPT launched in late 2022, it quickly blew up
+                        all over digital media. Within a few weeks, nearly every
+                        piece of media I consumed, regardless of form, volleyed
+                        a barrage of AI-related jargon at me. Chat-GPT, AI,
+                        GPT-4, AutoGPT, Transformers, Midjourney, DALL-E, Large
+                        Language Models, Deep Learning...the list seemed
+                        evergrowing
                     </p>
                     <p
-                        class="text-lg md:text-2xl lg:text-4xl leading-9 md:leading-10 pb-1 lg:pb-3 font-semibold text-on-primary-tint-10 dark:text-on-primary-dark-shade-90">
-                        Well,&nbsp;</p>
-                    <span
-                        class="text-4xl md:text-6xl lg:text-7xl leading-9 md:leading-10 italic font-black text-primary dark:text-primary-dark">Fuhgeddaboudit</span>
-
-
-                    <div class="flex-row text-center items-center justify-center mt-4 sm:mt-8">
-                        <button type="button" class="cta-btn animate-on-hover w-full sm:w-auto">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 md:h-14 md:w-14 icon"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="m12 20 3.46-6h-.01c.34-.6.55-1.27.55-2 0-1.2-.54-2.27-1.38-3h4.79c.38.93.59 1.94.59 3a8 8 0 0 1-8 8m-8-8c0-1.46.39-2.82 1.07-4l3.47 6h.01c.69 1.19 1.95 2 3.45 2 .45 0 .88-.09 1.29-.23l-2.4 4.14C7 19.37 4 16.04 4 12m11 0a3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3m-3-8a7.98 7.98 0 0 1 6.92 4H12c-1.94 0-3.55 1.38-3.92 3.21L5.7 7.08A7.981 7.981 0 0 1 12 4m0-2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z" />
-                            </svg>
-                            <span class="px-2 text-2xl md:text-4xl font-bold">Add to Chrome</span>
-                        </button>
-                    </div>
-
+                        class="text-md pb-4 text-primary-800 dark:text-primary-100 md:text-lg xl:text-2xl"
+                    >
+                        With this word-assault came a wave of fear-mongering,
+                        paranoia and AI saturation. I could not escape it at
+                        work, home or during lesiure, so I made this extension
+                        over April's Fools day as a mental escape.
+                    </p>
+                    <p
+                        class="text-md pb-4 text-primary-800 dark:text-primary-100 md:text-lg xl:text-2xl"
+                    >
+                        Over time, I learned that I was not alone in my dread or
+                        frustration. Turns out&nbsp;<a
+                            class="bold text-primary-500 transition-all hover:cursor-pointer hover:text-primary-600 hover:underline dark:text-primary-300 hover:dark:text-primary-200"
+                            href="https://blog.calm.com/blog/ai-anxiety-tips"
+                            target="_blank"
+                            and
+                            rel="noopener noreferrer"
+                            >AI Anxiety</a
+                        >
+                        is very real and is likely to get worse as AI news
+                        proliferates. I created this tool as a silly way to
+                        clear my head and drown out the noise. Hopefully, it can
+                        be of service to you and others in its own funny,
+                        whimsical way ❤️
+                    </p>
                 </div>
-
-                <div
-                    class="flex-col items-center justify-center rounded-2xl shadow-2xl shadow-slate-900 overflow-hidden bg-purple-950">
-                    <div id="headline-container">
-                        <!-- <template id="headline">
-                            <picture class="emoji">
-                                <source srcset="" type="image/webp">
-                                <img src="" alt="">
-                            </picture>
-                            <span id="headline-text"></span>
-                        </template> -->
-                    </div>
-                    <div class="flex items-center justify-center text-center my-3">
-                        <input type="checkbox" id="toggle-switch" />
-                        <label id="switch-label" for="toggle-switch">Toggle Switch</label>
-                    </div>
-                    <div class="w-full h-full items-center"><img class="w-full h-auto"
-                            src="./assets/hero/example-before.png" loading="lazy" /></div>
-                </div>
-            </div>
-        </section>
-        <!--Why-->
-        <section id="why">
-            <div class="mx-auto w-full lg:w-11/12 px-4 sm:px-10 lg:px-16">
-                <h1>Why?</h1>
-                <p>When ChatGPT launched in late 2022, it quickly blew up all over media. Within a few weeks, nearly
-                    every piece of media I consumed, in any form, mentioned ChatGPT, GPT-4, AI or some other related
-                    jargon. I was saturated and frustrated, my tech career and colleagues further compounding on this
-                    word-assault. Well, to alleviate my burden (and hopefully yours) I have created this tool. It's
-                    pretty whimsical, but I think the Web needs more of that nowadays :)</p>
-            </div>
-        </section>
-    </div>
-    <footer> <small>Copyright © 2023 Trypticon Solutions. All Rights Reserved.</small><a
-            href="./pages/privacy_policy.html">Privacy Policy</a></footer>
-</body>
-
+            </section>
+        </div>
+        <footer
+            class="mb-28 flex flex-col items-center justify-center bg-surface-100 py-2 text-center text-sm dark:bg-surface-800 sm:mb-24 sm:flex-row md:mb-0"
+        >
+            <p class="pe-0 text-primary-600 dark:text-primary-200 sm:pe-1">
+                Copyright © 2023 Trypticon Solutions.
+            </p>
+            <p class="pe-0 text-primary-600 dark:text-primary-200 sm:pe-1">
+                All Rights Reserved.
+            </p>
+            <a
+                class="bold pe-0 text-primary-500 transition-all hover:cursor-pointer hover:text-primary-600 hover:underline dark:text-primary-300 hover:dark:text-primary-200 sm:pe-1"
+                href="./pages/privacy_policy.html"
+                >Privacy Policy</a
+            >
+        </footer>
+    </body>
 </html>

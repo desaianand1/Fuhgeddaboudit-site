@@ -1,0 +1,19 @@
+{
+    "toggled-on":{
+        "highlighted": "Free",
+        "text": " from AI jargon.",
+        "webp": "https://fonts.gstatic.com/s/e/notoemoji/latest/1f604/512.webp",
+        "gif": "https://fonts.gstatic.com/s/e/notoemoji/latest/1f604/512.gif",
+        "alt": {
+            "emoji": "😄"
+        }
+    },
+    "toggled-off":{
+        "text": "AI buzzwords everywhere.",
+        "webp": "https://fonts.gstatic.com/s/e/notoemoji/latest/1f635_200d_1f4ab/512.webp",
+        "gif": "https://fonts.gstatic.com/s/e/notoemoji/latest/1f635_200d_1f4ab/512.gif",
+        "alt": {
+            "emoji": "😵"
+        }
+    }
+}
