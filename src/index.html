@@ -4,7 +4,6 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'"> -->
         <meta
             name="description"
             content="Fuhgeddaboudit is a chrome extension to clear your head from AI related jargon"
@@ -39,7 +38,7 @@
     </head>
 
     <body>
-        <div class="bg-white dark:bg-surface-100">
+        <div class="bg-surface-000 dark:bg-surface-900">
             <div class="xl:hero xl:dark:hero-dark">
                 <header class="inset-x-0 top-0 z-50">
                     <nav class="bg-transparent">
@@ -59,16 +58,16 @@
                                         alt="Fuhgeddaboudit logo"
                                     />
                                     <span
-                                        class="nav-title animate-color-on-hover ms-3"
+                                        class="hover:text-600 animate-color-on-hover ms-3 text-2xl font-black italic text-primary-500 dark:text-primary-300 dark:hover:text-primary-200 sm:text-3xl md:text-4xl"
                                         >Fuhgeddaboudit</span
                                     >
                                 </a>
                                 <div
-                                    class="bg-primary-tint-30 dark:bg-primary-shade-70 fixed inset-x-0 bottom-0 z-50 flex items-center justify-evenly p-4 md:relative md:space-x-4 md:bg-transparent"
+                                    class="fixed inset-x-0 bottom-0 z-50 flex items-center justify-evenly bg-surface-200 p-4 dark:bg-surface-800 md:relative md:space-x-4 md:bg-transparent"
                                 >
                                     <a
                                         href="#why"
-                                        class="nav-link animate-color-on-hover"
+                                        class="animate-color-on-hover rounded-md px-3 py-2 text-lg font-semibold text-primary-800 hover:bg-surface-100 dark:text-primary-100 dark:hover:bg-surface-800 md:text-xl"
                                         >Why?</a
                                     >
                                     <button
@@ -101,23 +100,39 @@
                         class="mx-auto grid w-full gap-6 px-4 pb-10 pt-20 sm:px-10 md:pb-20 md:pt-32 lg:w-11/12 lg:grid-cols-2 lg:gap-10 lg:px-16"
                     >
                         <div class="flex-col text-center lg:text-start">
-                            <h1
-                                class="text-primary dark:text-primary-dark pb-2 text-4xl font-black leading-10 md:text-5xl lg:pb-4 xl:text-7xl"
-                            >
-                                Tired of AI buzzwords?
-                            </h1>
+                            <span class="flex items-center md:items-stretch">
+                                <picture class="me-3">
+                                    <source
+                                        srcset="
+                                            https://fonts.gstatic.com/s/e/notoemoji/latest/1f62e_200d_1f4a8/512.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f62e_200d_1f4a8/512.gif"
+                                        alt="😮‍💨"
+                                        class="h-8 w-8 md:h-14 md:w-14"
+                                    />
+                                </picture>
+                                <h1
+                                    class="pb-2 text-4xl font-black leading-10 text-primary-700 dark:text-primary-100 md:text-5xl lg:pb-4 xl:text-6xl"
+                                >
+                                    Tired of AI buzzwords?
+                                </h1>
+                            </span>
+
                             <p
-                                class="text-on-primary-tint-10 dark:text-on-primary-dark-shade-90 pb-2 text-lg font-semibold leading-10 md:text-2xl lg:pb-4 xl:text-4xl"
+                                class="pb-2 text-lg font-semibold leading-10 text-primary-700 dark:text-primary-100 md:text-2xl lg:pb-4 xl:text-4xl"
                             >
                                 Don't want to read about it everywhere you look?
                             </p>
                             <p
-                                class="text-on-primary-tint-10 dark:text-on-primary-dark-shade-90 pb-1 text-lg font-semibold leading-10 md:text-2xl lg:pb-3 xl:text-4xl"
+                                class="pb-1 text-lg font-semibold leading-10 text-primary-700 dark:text-primary-100 md:text-2xl lg:pb-3 xl:text-4xl"
                             >
                                 Well,&nbsp;
                             </p>
                             <span
-                                class="text-primary dark:text-primary-dark text-4xl font-black italic leading-10 md:text-5xl xl:text-7xl"
+                                class="text-4xl font-black italic leading-10 text-primary-500 dark:text-primary-300 md:text-5xl xl:text-7xl"
                                 >Fuhgeddaboudit</span
                             >
 
@@ -146,14 +161,14 @@
                         </div>
 
                         <div
-                            class="flex-col items-center justify-center overflow-hidden rounded-2xl bg-hero-example-img shadow-2xl shadow-slate-900"
+                            class="flex-col items-center justify-center overflow-hidden rounded-2xl bg-hero-example-img shadow-2xl shadow-slate-900/50 dark:shadow-slate-800/50"
                         >
                             <div
                                 id="headline-container"
                                 class="m:py-4 flex flex-row items-center justify-center py-2"
                             >
                                 <template id="headline">
-                                    <picture class="emoji">
+                                    <picture class="emoji me-3">
                                         <source
                                             srcset="
                                                 https://fonts.gstatic.com/s/e/notoemoji/latest/1f635_200d_1f4ab/512.webp
@@ -197,26 +212,65 @@
             <!--Why-->
             <section id="why">
                 <div class="mx-auto w-full px-4 sm:px-10 lg:w-11/12 lg:px-16">
-                    <h1>Why?</h1>
-                    <p>
+                    <h1
+                        class="pb-4 text-lg font-semibold text-primary-500 dark:text-primary-300 md:text-2xl xl:text-4xl"
+                    >
+                        Why?
+                    </h1>
+                    <p
+                        class="text-md pb-4 text-primary-800 dark:text-primary-100 md:text-lg xl:text-2xl"
+                    >
                         When ChatGPT launched in late 2022, it quickly blew up
-                        all over media. Within a few weeks, nearly every piece
-                        of media I consumed, in any form, mentioned ChatGPT,
-                        GPT-4, AI or some other related jargon. I was saturated
-                        and frustrated, my tech career and colleagues further
-                        compounding on this word-assault. Well, to alleviate my
-                        burden (and hopefully yours) I have created this tool.
-                        It's pretty whimsical, but I think the Web needs more of
-                        that nowadays :)
+                        all over digital media. Within a few weeks, nearly every
+                        piece of media I consumed, regardless of form, volleyed
+                        a barrage of AI-related jargon at me. Chat-GPT, AI,
+                        GPT-4, AutoGPT, Transformers, Midjourney, DALL-E, Large
+                        Language Models, Deep Learning...the list seemed
+                        evergrowing
+                    </p>
+                    <p
+                        class="text-md pb-4 text-primary-800 dark:text-primary-100 md:text-lg xl:text-2xl"
+                    >
+                        With this word-assault came a wave of fear-mongering,
+                        paranoia and AI saturation. I could not escape it at
+                        work, home or during lesiure, so I made this extension
+                        over April's Fools day as a mental escape.
+                    </p>
+                    <p
+                        class="text-md pb-4 text-primary-800 dark:text-primary-100 md:text-lg xl:text-2xl"
+                    >
+                        Over time, I learned that I was not alone in my dread or
+                        frustration. Turns out&nbsp;<a
+                            class="bold text-primary-500 transition-all hover:cursor-pointer hover:text-primary-600 hover:underline dark:text-primary-300 hover:dark:text-primary-200"
+                            href="https://blog.calm.com/blog/ai-anxiety-tips"
+                            target="_blank"
+                            and
+                            rel="noopener noreferrer"
+                            >AI Anxiety</a
+                        >
+                        is very real and is likely to get worse as AI news
+                        proliferates. I created this tool as a silly way to
+                        clear my head and drown out the noise. Hopefully, it can
+                        be of service to you and others in its own funny,
+                        whimsical way ❤️
                     </p>
                 </div>
             </section>
         </div>
-        <footer>
-            <small
-                >Copyright © 2023 Trypticon Solutions. All Rights
-                Reserved.</small
-            ><a href="./pages/privacy_policy.html">Privacy Policy</a>
+        <footer
+            class="mb-28 flex flex-col items-center justify-center bg-surface-100 py-2 text-center text-sm dark:bg-surface-800 sm:mb-24 sm:flex-row md:mb-0"
+        >
+            <p class="pe-0 text-primary-600 dark:text-primary-200 sm:pe-1">
+                Copyright © 2023 Trypticon Solutions.
+            </p>
+            <p class="pe-0 text-primary-600 dark:text-primary-200 sm:pe-1">
+                All Rights Reserved.
+            </p>
+            <a
+                class="bold pe-0 text-primary-500 transition-all hover:cursor-pointer hover:text-primary-600 hover:underline dark:text-primary-300 hover:dark:text-primary-200 sm:pe-1"
+                href="./pages/privacy_policy.html"
+                >Privacy Policy</a
+            >
         </footer>
     </body>
 </html>

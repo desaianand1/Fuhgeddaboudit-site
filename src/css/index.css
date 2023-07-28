@@ -10,23 +10,15 @@
 
 @layer components {
     .cta-btn {
-        @apply bg-primary dark:bg-primary-dark text-on-primary dark:text-on-primary-dark hover:bg-primary-shade-70 dark:hover:bg-primary-dark-tint-30 hover:text-on-primary-shade-70 dark:hover:text-on-primary-dark-tint-30 focus:ring-primary dark:focus:ring-primary-dark shadow-primary/50 dark:shadow-primary-dark/50 inline-flex items-center justify-center rounded-full px-2.5 py-2 text-center shadow-lg focus:outline-none focus:ring-2 focus:ring-inset;
-    }
-
-    .nav-link {
-        @apply text-on-primary-tint-10 dark:text-on-primary-dark-shade-90 hover:bg-primary-tint-30 dark:hover:bg-primary-dark-shade-70 hover:text-on-primary-tint-30 dark:hover:text-on-primary-dark-shade-70 rounded-md px-3 py-2 text-lg font-semibold md:text-xl;
-    }
-
-    .nav-title {
-        @apply text-primary dark:text-primary-dark hover:text-primary-shade-70 dark:hover:text-primary-dark-tint-30 text-2xl font-black italic sm:text-3xl md:text-4xl;
+        @apply inline-flex items-center justify-center rounded-full bg-primary-500 px-2.5 py-2 text-center text-white shadow-lg shadow-primary-500/50 hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-600 dark:bg-primary-300 dark:text-black dark:shadow-primary-300/50 dark:hover:bg-primary-200 dark:focus:ring-primary-400;
     }
 
     .icon {
-        @apply fill-on-primary dark:fill-on-primary-dark stroke-2;
+        @apply fill-white stroke-2 dark:fill-black;
     }
 
     .cta-btn.animate-on-hover:hover .icon {
-        @apply fill-on-primary-shade-70 dark:fill-on-primary-dark-tint-30 transition-all duration-300 ease-in-out motion-reduce:transition-none motion-reduce:hover:transform-none;
+        @apply transition-all duration-300 ease-in-out motion-reduce:transition-none motion-reduce:hover:transform-none;
         animation: spin 1250ms ease-in-out normal;
     }
 
@@ -70,7 +62,7 @@
     }
 
     .emphasized-text {
-        @apply font-extrabold text-primary-100 dark:text-primary-300;
+        @apply font-black text-primary-500 dark:text-primary-300;
     }
 }
 @layer utilities {
@@ -121,7 +113,7 @@ label#switch-label:after {
 }
 
 input#toggle-switch:checked + label {
-    @apply bg-primary-100 transition-colors duration-300 dark:bg-primary-300;
+    @apply bg-primary-500 transition-colors duration-300 dark:bg-primary-300;
 }
 
 input#toggle-switch:checked + label:after {
@@ -131,21 +123,4 @@ input#toggle-switch:checked + label:after {
 
 label#switch-label:active:after {
     width: calc(0.55 * var(--switch-width));
-}
-
-#headline-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding-block: 0.5em;
-}
-
-#headline-text {
-    font-weight: bold;
-    font-size: 1.75em;
-}
-
-picture.emoji {
-    margin-inline-end: 0.75em;
 }
