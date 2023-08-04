@@ -56,14 +56,6 @@
         background-image: url("../assets/hero/test-bubbles.svg");
         background-size: cover;
     }
-
-    .deemphasized-text {
-        @apply text-deemphasized;
-    }
-
-    .emphasized-text {
-        @apply font-black text-primary-500 dark:text-primary-300;
-    }
 }
 @layer utilities {
     .animate-on-hover {
@@ -73,12 +65,6 @@
     .animate-color-on-hover {
         @apply transition-colors duration-300 ease-in-out motion-reduce:transition-none;
     }
-}
-
-input#toggle-switch[type="checkbox"] {
-    height: 0;
-    width: 0;
-    visibility: hidden;
 }
 
 label#switch-label {

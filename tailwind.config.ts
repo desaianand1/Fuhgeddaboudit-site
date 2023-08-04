@@ -1,11 +1,11 @@
 import defaultTheme from "tailwindcss/defaultTheme";
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+    darkMode: "class",
     content: ["./src/**/*.{html,js,ts}"],
     theme: {
         extend: {
             colors: {
-                deemphasized: "#444b6a",
                 "hero-example-img": "#25293C",
                 "primary-100": "#dfd7ff",
                 "primary-200": "#bdb1ff",
