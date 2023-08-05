@@ -5,6 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self' fonts.gstatic.com fonts.googleapis.com"
+        />
+        <meta
             name="description"
             content="Fuhgeddaboudit is a chrome extension to clear your head from AI related jargon"
         />
@@ -83,9 +87,11 @@
                                         class="animate-color-on-hover rounded-md px-3 py-2 text-lg font-bold text-primary-600 hover:bg-surface-100/60 dark:text-primary-100 dark:hover:bg-surface-700 md:text-xl"
                                         >Why?</a
                                     >
-                                    <button
-                                        type="button"
+                                    <a
                                         class="cta-btn animate-on-hover"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        href="https://chrome.google.com/webstore/detail/fuhgeddaboudit/bpcmajgfgplbbhdcgpbgeedmkapmajcj"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +107,7 @@
                                             class="px-2 text-lg font-bold md:text-xl"
                                             >Add to Chrome</span
                                         >
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -113,32 +119,43 @@
                         class="mx-auto grid w-full gap-6 px-4 pb-10 pt-20 sm:px-10 md:pb-20 md:pt-32 lg:w-11/12 lg:grid-cols-2 lg:gap-10 lg:px-16"
                     >
                         <div class="flex-col text-center lg:text-start">
-                            <h1
-                                class="pb-2 text-4xl font-black leading-10 text-primary-700 dark:text-primary-100 md:text-5xl lg:pb-4 xl:text-6xl"
-                            >
-                                Tired of AI buzzwords?
-                            </h1>
-                            <p
-                                class="pb-2 text-lg font-semibold leading-10 text-primary-700 dark:text-primary-100 md:text-2xl lg:pb-4 xl:text-4xl"
-                            >
-                                Don't want to read about it everywhere you look?
-                            </p>
-                            <p
-                                class="pb-1 text-lg font-semibold leading-10 text-primary-700 dark:text-primary-100 md:text-2xl lg:pb-3 xl:text-4xl"
-                            >
-                                Well,&nbsp;
-                            </p>
-                            <span
-                                class="text-4xl font-black italic leading-10 text-primary-500 dark:text-primary-300 md:text-5xl xl:text-7xl"
-                                >Fuhgeddaboudit</span
-                            >
+                            <div class="mb-4">
+                                <h1
+                                    class="text-4xl font-black leading-10 text-primary-700 dark:text-primary-100 md:text-5xl lg:pb-4 xl:text-6xl"
+                                >
+                                    Tired of AI buzzwords?
+                                </h1>
+                            </div>
+                            <div class="my-4">
+                                <p
+                                    class="text-lg font-semibold leading-10 text-primary-700 dark:text-primary-100 md:text-2xl lg:pb-4 xl:text-4xl"
+                                >
+                                    Don't want to read about it everywhere you
+                                    look?
+                                </p>
+                            </div>
+                            <div class="my-4">
+                                <p
+                                    class="text-lg font-semibold leading-10 text-primary-700 dark:text-primary-100 md:text-2xl lg:pb-3 xl:text-4xl"
+                                >
+                                    Well,&nbsp;
+                                </p>
+                            </div>
+                            <div class="my-8">
+                                <span
+                                    class="text-4xl font-black italic leading-10 text-primary-500 dark:text-primary-300 md:text-5xl xl:text-7xl"
+                                    >Fuhgeddaboudit</span
+                                >
+                            </div>
 
                             <div
                                 class="mt-4 flex-row justify-center text-center sm:mt-8 lg:text-start"
                             >
-                                <button
-                                    type="button"
+                                <a
                                     class="cta-btn animate-on-hover w-full sm:w-auto"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://chrome.google.com/webstore/detail/fuhgeddaboudit/bpcmajgfgplbbhdcgpbgeedmkapmajcj"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -153,7 +170,7 @@
                                         class="px-2 text-2xl font-bold md:text-4xl"
                                         >Add to Chrome</span
                                     >
-                                </button>
+                                </a>
                             </div>
                         </div>
 
@@ -228,15 +245,15 @@
                             <div class="relative h-full w-full items-center">
                                 <img
                                     id="hero-img-before"
-                                    class="visible relative h-auto w-full"
-                                    src="./assets/hero/example-before.png"
+                                    class="visible relative aspect-video h-auto w-full"
+                                    src="./assets/hero/example-before.webp"
                                     loading="lazy"
                                     alt="before Fuhgeddaboudit"
                                 />
                                 <img
                                     id="hero-img-after"
-                                    class="invisible absolute h-auto w-full"
-                                    src="./assets/hero/example-after.png"
+                                    class="invisible absolute aspect-video h-auto w-full"
+                                    src="./assets/hero/example-after.webp"
                                     loading="lazy"
                                     alt="after Fuhgeddaboudit"
                                 />
@@ -275,6 +292,8 @@
             <a
                 class="px-2 py-1 font-extrabold text-primary-500 underline transition-all hover:cursor-pointer hover:rounded-md hover:bg-surface-200/60 dark:text-primary-300 dark:hover:bg-surface-700 hover:dark:text-primary-200 sm:pe-1 sm:no-underline"
                 href="./pages/privacy_policy.html"
+                target="_blank"
+                rel="noopener noreferrer"
                 >Privacy Policy</a
             >
         </footer>
