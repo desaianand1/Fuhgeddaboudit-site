@@ -1,8 +1,9 @@
-import { initializeThemeToggler } from "./theme-toggle";
+import { initializeThemeToggler, setSavedTheme } from "./theme-toggle";
 import { initializeHeroToggler } from "./hero-toggle";
 
 function onDOMLoaded(): void {
-    initializeThemeToggler();
+    const initialTheme = setSavedTheme();
+    initializeThemeToggler(initialTheme);
     initializeHeroToggler();
 }
 

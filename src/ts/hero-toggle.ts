@@ -9,8 +9,11 @@ export function initializeHeroToggler() {
     setHeroImage(toggleSwitch.checked);
 }
 
-export function onToggled(event: Event) {
-    const toggleSwitch = <HTMLInputElement>event.target;
-    setHeroHeadline(toggleSwitch.checked);
-    setHeroImage(toggleSwitch.checked);
+function onToggled(event: Event) {
+    function toggleState() {
+        const toggleSwitch = <HTMLInputElement>event.target;
+        setHeroHeadline(toggleSwitch.checked);
+        setHeroImage(toggleSwitch.checked);
+    }
+    setTimeout(toggleState, 250);
 }
