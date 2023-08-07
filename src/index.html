@@ -1,9 +1,13 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth transition-colors">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self' fonts.gstatic.com fonts.googleapis.com"
+        />
         <meta
             name="description"
             content="Fuhgeddaboudit is a chrome extension to clear your head from AI related jargon"
@@ -38,18 +42,16 @@
     </head>
 
     <body>
-        <div class="bg-surface-000 dark:bg-surface-900">
+        <div class="bg-surface-000 pb-8 dark:bg-surface-900">
             <div class="xl:hero xl:dark:hero-dark">
                 <header class="inset-x-0 top-0 z-50">
                     <nav class="bg-transparent">
-                        <div
-                            class="mx-auto max-w-full px-2 py-2 sm:px-6 lg:px-12 lg:py-4"
-                        >
+                        <div class="px-2 py-2 sm:px-6 lg:px-12 lg:py-4">
                             <div
                                 class="relative flex h-8 items-center justify-center md:h-16 md:justify-between"
                             >
                                 <a
-                                    href="#"
+                                    href="./"
                                     class="flex items-center justify-center"
                                 >
                                     <img
@@ -63,16 +65,33 @@
                                     >
                                 </a>
                                 <div
-                                    class="fixed inset-x-0 bottom-0 z-50 flex items-center justify-evenly bg-surface-200 p-4 dark:bg-surface-800 md:relative md:space-x-4 md:bg-transparent"
+                                    class="fixed inset-x-0 bottom-0 z-50 flex h-16 items-center justify-evenly bg-surface-200 p-4 dark:bg-surface-800 md:relative md:space-x-4 md:bg-transparent md:dark:bg-transparent"
                                 >
+                                    <div class="theme-toggle-container">
+                                        <label
+                                            for="theme-toggle-switch"
+                                            class="theme-toggle-label"
+                                        >
+                                            <input
+                                                id="theme-toggle-switch"
+                                                type="checkbox"
+                                            />
+                                            <span
+                                                class="theme-toggle-slider"
+                                            ></span>
+                                        </label>
+                                    </div>
+
                                     <a
                                         href="#why"
-                                        class="animate-color-on-hover rounded-md px-3 py-2 text-lg font-semibold text-primary-800 hover:bg-surface-100 dark:text-primary-100 dark:hover:bg-surface-800 md:text-xl"
+                                        class="animate-color-on-hover rounded-md px-3 py-2 text-lg font-bold text-primary-600 hover:bg-surface-100/60 dark:text-primary-100 dark:hover:bg-surface-700 md:text-xl"
                                         >Why?</a
                                     >
-                                    <button
-                                        type="button"
+                                    <a
                                         class="cta-btn animate-on-hover"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        href="https://chrome.google.com/webstore/detail/fuhgeddaboudit/bpcmajgfgplbbhdcgpbgeedmkapmajcj"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +107,7 @@
                                             class="px-2 text-lg font-bold md:text-xl"
                                             >Add to Chrome</span
                                         >
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -100,48 +119,43 @@
                         class="mx-auto grid w-full gap-6 px-4 pb-10 pt-20 sm:px-10 md:pb-20 md:pt-32 lg:w-11/12 lg:grid-cols-2 lg:gap-10 lg:px-16"
                     >
                         <div class="flex-col text-center lg:text-start">
-                            <span class="flex items-center md:items-stretch">
-                                <picture class="me-3">
-                                    <source
-                                        srcset="
-                                            https://fonts.gstatic.com/s/e/notoemoji/latest/1f62e_200d_1f4a8/512.webp
-                                        "
-                                        type="image/webp"
-                                    />
-                                    <img
-                                        src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f62e_200d_1f4a8/512.gif"
-                                        alt="😮‍💨"
-                                        class="h-8 w-8 md:h-14 md:w-14"
-                                    />
-                                </picture>
+                            <div class="mb-4">
                                 <h1
-                                    class="pb-2 text-4xl font-black leading-10 text-primary-700 dark:text-primary-100 md:text-5xl lg:pb-4 xl:text-6xl"
+                                    class="text-4xl font-black leading-10 text-primary-700 dark:text-primary-100 md:text-5xl lg:pb-4 xl:text-6xl"
                                 >
                                     Tired of AI buzzwords?
                                 </h1>
-                            </span>
-
-                            <p
-                                class="pb-2 text-lg font-semibold leading-10 text-primary-700 dark:text-primary-100 md:text-2xl lg:pb-4 xl:text-4xl"
-                            >
-                                Don't want to read about it everywhere you look?
-                            </p>
-                            <p
-                                class="pb-1 text-lg font-semibold leading-10 text-primary-700 dark:text-primary-100 md:text-2xl lg:pb-3 xl:text-4xl"
-                            >
-                                Well,&nbsp;
-                            </p>
-                            <span
-                                class="text-4xl font-black italic leading-10 text-primary-500 dark:text-primary-300 md:text-5xl xl:text-7xl"
-                                >Fuhgeddaboudit</span
-                            >
+                            </div>
+                            <div class="my-4">
+                                <p
+                                    class="text-lg font-semibold leading-10 text-primary-700 dark:text-primary-100 md:text-2xl lg:pb-4 xl:text-4xl"
+                                >
+                                    Don't want to read about it everywhere you
+                                    look?
+                                </p>
+                            </div>
+                            <div class="my-4">
+                                <p
+                                    class="text-lg font-semibold leading-10 text-primary-700 dark:text-primary-100 md:text-2xl lg:pb-3 xl:text-4xl"
+                                >
+                                    Well,&nbsp;
+                                </p>
+                            </div>
+                            <div class="my-8">
+                                <span
+                                    class="text-4xl font-black italic leading-10 text-primary-500 dark:text-primary-300 md:text-5xl xl:text-7xl"
+                                    >Fuhgeddaboudit</span
+                                >
+                            </div>
 
                             <div
                                 class="mt-4 flex-row justify-center text-center sm:mt-8 lg:text-start"
                             >
-                                <button
-                                    type="button"
+                                <a
                                     class="cta-btn animate-on-hover w-full sm:w-auto"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://chrome.google.com/webstore/detail/fuhgeddaboudit/bpcmajgfgplbbhdcgpbgeedmkapmajcj"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -156,19 +170,19 @@
                                         class="px-2 text-2xl font-bold md:text-4xl"
                                         >Add to Chrome</span
                                     >
-                                </button>
+                                </a>
                             </div>
                         </div>
 
                         <div
                             class="flex-col items-center justify-center overflow-hidden rounded-2xl bg-hero-example-img shadow-2xl shadow-slate-900/50 dark:shadow-slate-800/50"
                         >
-                            <div
-                                id="headline-container"
-                                class="m:py-4 flex flex-row items-center justify-center py-2"
-                            >
-                                <template id="headline">
-                                    <picture class="emoji me-3">
+                            <div class="py-2">
+                                <div
+                                    id="headline-toggled-off"
+                                    class="visible relative mt-8 flex flex-row items-center justify-center text-center"
+                                >
+                                    <picture class="me-3">
                                         <source
                                             srcset="
                                                 https://fonts.gstatic.com/s/e/notoemoji/latest/1f635_200d_1f4ab/512.webp
@@ -178,31 +192,70 @@
                                         <img
                                             src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f635_200d_1f4ab/512.gif"
                                             alt="😵"
-                                            class="h-7 w-7 md:h-14 md:w-14"
+                                            class="xl:h-18 xl:w-18 h-8 w-8 md:h-14 md:w-14"
                                         />
                                     </picture>
                                     <span
                                         id="headline-text"
-                                        class="deemphasized-text text-lg font-bold md:text-2xl xl:text-4xl"
+                                        class="text-xl font-bold text-slate-400 md:text-3xl xl:text-5xl"
                                         >AI buzzwords everywhere.</span
                                     >
-                                </template>
+                                </div>
+                                <div
+                                    id="headline-toggled-on"
+                                    class="invisible absolute mt-8 flex flex-row items-center justify-center text-center"
+                                >
+                                    <picture class="me-3">
+                                        <source
+                                            srcset="
+                                                https://fonts.gstatic.com/s/e/notoemoji/latest/1f604/512.webp
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f604/512.gif"
+                                            alt="😄"
+                                            class="xl:h-18 xl:w-18 h-8 w-8 md:h-14 md:w-14"
+                                        />
+                                    </picture>
+                                    <span
+                                        id="headline-text"
+                                        class="text-xl font-bold text-slate-400 md:text-3xl xl:text-5xl"
+                                    >
+                                        <span
+                                            class="font-black text-primary-alt-400 dark:text-primary-300"
+                                            >Free</span
+                                        >&nbsp;from AI jargon.</span
+                                    >
+                                </div>
                             </div>
                             <div
                                 class="my-3 flex items-center justify-center text-center"
                             >
-                                <input type="checkbox" id="toggle-switch" />
-                                <label id="switch-label" for="toggle-switch"
-                                    >Toggle Switch</label
-                                >
+                                <input
+                                    type="checkbox"
+                                    id="toggle-switch"
+                                    class="peer invisible h-0 w-0"
+                                />
+                                <label
+                                    id="switch-label"
+                                    for="toggle-switch"
+                                ></label>
                             </div>
-                            <div class="h-full w-full items-center">
+                            <div class="relative h-full w-full items-center">
                                 <img
-                                    id="example-img"
-                                    class="h-auto w-full"
-                                    src="./assets/hero/example-before.png"
+                                    id="hero-img-before"
+                                    class="visible relative aspect-video h-auto w-full"
+                                    src="./assets/hero/example-before.webp"
                                     loading="lazy"
-                                    alt="before and after Fuhgeddaboudit"
+                                    alt="before Fuhgeddaboudit"
+                                />
+                                <img
+                                    id="hero-img-after"
+                                    class="invisible absolute aspect-video h-auto w-full"
+                                    src="./assets/hero/example-after.webp"
+                                    loading="lazy"
+                                    alt="after Fuhgeddaboudit"
                                 />
                             </div>
                         </div>
@@ -211,64 +264,63 @@
             </div>
             <!--Why-->
             <section id="why">
-                <div class="mx-auto w-full px-4 sm:px-10 lg:w-11/12 lg:px-16">
+                <div
+                    class="mx-auto my-4 w-11/12 rounded-2xl bg-surface-100 px-4 py-2 dark:bg-surface-800 sm:p-10 lg:p-16"
+                >
                     <h1
-                        class="pb-4 text-lg font-semibold text-primary-500 dark:text-primary-300 md:text-2xl xl:text-4xl"
+                        class="pb-8 text-lg font-semibold text-primary-500 dark:text-primary-300 md:text-2xl xl:text-4xl"
                     >
                         Why?
                     </h1>
                     <p
                         class="text-md pb-4 text-primary-800 dark:text-primary-100 md:text-lg xl:text-2xl"
                     >
-                        When ChatGPT launched in late 2022, it quickly blew up
-                        all over digital media. Within a few weeks, nearly every
-                        piece of media I consumed, regardless of form, volleyed
-                        a barrage of AI-related jargon at me. Chat-GPT, AI,
-                        GPT-4, AutoGPT, Transformers, Midjourney, DALL-E, Large
-                        Language Models, Deep Learning...the list seemed
-                        evergrowing
+                        In late 2022, ChatGPT became a sensation across the
+                        internet, media, and tech circles. It was difficult to
+                        engage in any activity, read an article, or have a
+                        conversation without encountering the term "AI" or some
+                        related buzzword.
                     </p>
                     <p
                         class="text-md pb-4 text-primary-800 dark:text-primary-100 md:text-lg xl:text-2xl"
                     >
-                        With this word-assault came a wave of fear-mongering,
-                        paranoia and AI saturation. I could not escape it at
-                        work, home or during lesiure, so I made this extension
-                        over April's Fools day as a mental escape.
+                        AI-related jargon infiltrated my workplace, home, and
+                        even my interactions with friends. I just wanted a break
+                        from this deluge, so I made this project over an April
+                        Fool's weekend.
                     </p>
                     <p
                         class="text-md pb-4 text-primary-800 dark:text-primary-100 md:text-lg xl:text-2xl"
                     >
-                        Over time, I learned that I was not alone in my dread or
-                        frustration. Turns out&nbsp;<a
-                            class="bold text-primary-500 transition-all hover:cursor-pointer hover:text-primary-600 hover:underline dark:text-primary-300 hover:dark:text-primary-200"
-                            href="https://blog.calm.com/blog/ai-anxiety-tips"
-                            target="_blank"
-                            and
-                            rel="noopener noreferrer"
-                            >AI Anxiety</a
-                        >
-                        is very real and is likely to get worse as AI news
-                        proliferates. I created this tool as a silly way to
-                        clear my head and drown out the noise. Hopefully, it can
-                        be of service to you and others in its own funny,
-                        whimsical way ❤️
+                        This really helped me escape some of that noise in a
+                        whimsical way. I can now browse Linkedin in peace again.
+                    </p>
+                    <p
+                        class="text-md pb-4 text-primary-800 dark:text-primary-100 md:text-lg xl:text-2xl"
+                    >
+                        Hopefully, this tool can provide some respite for you
+                        too ❤️!
                     </p>
                 </div>
             </section>
         </div>
         <footer
-            class="mb-28 flex flex-col items-center justify-center bg-surface-100 py-2 text-center text-sm dark:bg-surface-800 sm:mb-24 sm:flex-row md:mb-0"
+            class="mb-16 flex flex-col items-center justify-center gap-4 bg-surface-100 py-2 text-center text-sm dark:bg-surface-800 sm:mb-0 sm:flex-row sm:text-base"
         >
-            <p class="pe-0 text-primary-600 dark:text-primary-200 sm:pe-1">
+            <p class="font-bold text-gray-500 dark:text-primary-200">
+                Made with mild frustration 🙃
+            </p>
+            <p class="font-bold text-gray-500 dark:text-primary-200">
                 Copyright © 2023 Trypticon Solutions.
             </p>
-            <p class="pe-0 text-primary-600 dark:text-primary-200 sm:pe-1">
+            <p class="font-bold text-gray-500 dark:text-primary-200">
                 All Rights Reserved.
             </p>
             <a
-                class="bold pe-0 text-primary-500 transition-all hover:cursor-pointer hover:text-primary-600 hover:underline dark:text-primary-300 hover:dark:text-primary-200 sm:pe-1"
+                class="px-2 py-1 font-extrabold text-primary-500 underline transition-all hover:cursor-pointer hover:rounded-md hover:bg-surface-200/60 dark:text-primary-300 dark:hover:bg-surface-700 hover:dark:text-primary-200 sm:pe-1 sm:no-underline"
                 href="./pages/privacy_policy.html"
+                target="_blank"
+                rel="noopener noreferrer"
                 >Privacy Policy</a
             >
         </footer>
