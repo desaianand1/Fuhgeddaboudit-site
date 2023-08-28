@@ -40,7 +40,7 @@ module.exports = {
                 ],
             },
             screens: {
-                xs: "280px",
+                xs: "356px",
             },
         },
     },
