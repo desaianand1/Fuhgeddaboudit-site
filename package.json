@@ -7,7 +7,7 @@
     "start": "npm run clean && parcel",
     "build": "npm run clean && parcel build --target default",
     "push-gh-pages": "gh-pages -d dist -b gh-pages",
-    "deploy": "npm run build && push-gh-pages",
+    "deploy": "npm run build && npm run push-gh-pages",
     "clean": "rimraf dist",
     "prepare": "husky install"
   },
