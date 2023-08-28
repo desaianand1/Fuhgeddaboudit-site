@@ -39,6 +39,9 @@ module.exports = {
                     ...defaultTheme.fontFamily.sans,
                 ],
             },
+            screens: {
+                xs: "280px",
+            },
         },
     },
     plugins: [],
