@@ -4,8 +4,9 @@
   "description": "Fuhgeddaboudit is a chrome extension to clear your head from AI related jargon",
   "source": "src/index.html",
   "scripts": {
-    "start": "npm run clean && parcel",
-    "build": "npm run clean && parcel build --target default",
+    "copy-static": "shx mkdir -p dist/ && shx cp src/robots.txt dist/",
+    "start": "npm run clean && npm run copy-static && parcel",
+    "build": "npm run clean && parcel build --target default && npm run copy-static",
     "push-gh-pages": "gh-pages -d dist -b gh-pages",
     "deploy": "npm run build && npm run push-gh-pages",
     "clean": "rimraf dist",
@@ -39,6 +40,7 @@
     "prettier": "^3.0.0",
     "prettier-plugin-tailwindcss": "^0.4.1",
     "rimraf": "^5.0.0",
+    "shx": "^0.3.4",
     "tailwindcss": "^3.3.1",
     "typescript": "^5.0.4"
   },
